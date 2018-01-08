@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Index.master.cs" Inherits="OBDSystemAPP.UI.Index" %>
+
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <title>OBDIS|S</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/ap/apContent/Template/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Custom.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container" id="wrapper">
+        <!--Header Part-->
+        <div class="row">
+            <div class="page-header " id="page-header2">
+                <div class="left-logo">
+                    <img src="/Content/Images/bloodLogo.jpg"  alt="bloodLogo" class="img-responsive" style="height: 142px;"/>
+                </div>
+                <div class="right-logo" style="background: url(/Content/Images/redBlood.jpg);">
+                    <h2 style="line-height: 88px;"><strong>
+                        <label style="font-size: 55px;">O</label>nline Blood Donation Information System | OBDIS</strong></h2>
+                </div>
+            </div>
+            <!--End Header Part-->
+            <!--menu Part-->
+            <div class="row" id="menu">
+                <nav class="navbar bg-success" style="margin: 0px;">
+                    <div class="container-fluid" style="margin-left: 60px;">
+                        <div class="collapse navbar-collapse" id="#">
+                            <ul class="nav navbar-nav">
+                                <li><a href="AdviceForm.aspx"><strong>Home</strong> <span class="sr-only"></span></a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Be a Donor</strong><span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="DonorRegistrationForm.aspx">Registration</a>
+                                        </li>
+
+                                    </ul>
+                                </li> 
+                                <li><a href="FindDonor.aspx"><strong>Find Donor</strong></a></li>
+                                <li><a href="FindOrgInfo.aspx"><strong>Find Organization</strong></a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Achievement</strong><span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="CampaignInfo.aspx">Campaign</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                 
+                                <li><a href="ContactUs.aspx"><strong>Contact Us</strong></a></li>
+                                <li><a href="Login.aspx"><strong>LogIn</strong></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!--Master form start-->
+            <form id="UserSideForm" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="mainBodyMaster" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+            <!--Footer Part-->
+            <div id="push"></div>
+            <div id="footer" style="background: url(/Content/Images/slice.jpg);">
+                <div id="content">
+                    All &copy;Copyrights 2016-2017 reserved by OBDIS.
+        <span class="pull-right">Developed by
+            <a target="_blank" href="https://www.fb.com/sakib.alsamad9">Sakib Al Samad | OBDIS</a>
+        </span>
+                </div>
+            </div>
+            <!--End Footer Part-->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end main container -->
+
+    <script src="../Scripts/jquery-3.2.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+   <script src="../Scripts/jquery.validate.min.js"></script>
+    <asp:ContentPlaceHolder runat="server" ID="script"></asp:ContentPlaceHolder>
+     
+</body>
+</html>

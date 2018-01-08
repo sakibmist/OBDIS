@@ -1,0 +1,106 @@
+﻿body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+#wrapper {
+    min-height:860px;
+    height: 100%;
+    position:relative;
+     background-color: #7f8c8d; 
+}
+#page-header2{
+    margin: 0px;
+    height: 146px;
+    width: 100%; 
+}
+.left-logo{
+    width: 9.8%;
+    height: 106%;
+    float: left;
+    border: 1px solid red;
+    border-radius: 10px 0px 0px 0px;
+}
+.right-logo{
+    width: 90.2%;
+    height: 106%;
+    float: right;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 0px 5px 0px 0px;
+    float: left;
+} 
+.required{
+    color:red;
+}
+#menu{
+    display: inline;
+    margin: 0px;
+}
+#login_display{
+    margin-top: 40%;
+}
+#slider2{
+    display: inline;
+    margin: 0px;
+}
+.item img{
+    width: 100%;
+}
+#ul_style{
+    font-size: 18px;
+}
+#hr_style{
+    margin-left: 40px;
+    margin-right: 90px;
+    margin-top: -10px;
+    border: 1px solid #a94442;
+}
+.hr_style {
+    margin-left: 40px;
+    margin-right: 90px;
+    margin-top: -10px;
+    border: 1px solid #a94442;
+}
+ 
+#donationPrescription{
+    background-color: white;
+    width: 100%;
+    min-height: 100%;
+    margin:0px;
+    border-left: 1px solid #7f8c8d;
+    border-right: 1px solid #7f8c8d;
+}
+#pagePosition{
+    margin-top:2%;
+    margin-bottom: 2%;
+}
+.success{
+    background-color: #FA5247;
+}
+#push{
+    margin-bottom: 50px;
+}
+#footer{ 
+    background-color: #4E5D6C;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    width: 100%;
+    height:50px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+	min-height: 600px;
+	height: 100%;
+}
+ 
+#content{
+	padding: 0 10px;
+}
+ 

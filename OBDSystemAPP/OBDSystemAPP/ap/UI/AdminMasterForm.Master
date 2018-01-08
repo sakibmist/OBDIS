@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterForm.master.cs" Inherits="OBDSystemAPP.ap.UI.AdminMasterForm" %>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8"/>
+    <title>Admin Form</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder> 
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../apContent/Template/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../apContent/Template/css/AdminLTE.css" rel="stylesheet" />
+     <link href="../../Content/Custom.css" rel="stylesheet" />
+    
+</head>
+<body>
+   
+    <div class="container" id="wrapper">
+        <!--Header Part-->
+        <div class="row">
+            <div class="page-header " id="page-header2">
+                <div class="left-logo">
+                    <img src="/Content/Images/bloodLogo.jpg" alt="blood Cell" class="img-responsive" style="height: 142px;"/>
+                </div>
+                <div class="right-logo" style="background: url(/Content/Images/redBlood.jpg);">
+                    <h2 style="line-height: 88px;"><strong>
+                        <label style="font-size: 55px;">O</label>nline Blood Donation Information System | OBDIS</strong></h2>
+                </div>
+            </div>
+            <!--End Header Part-->
+    <form id="adminLogInMasterForm" runat="server">
+   
+        <asp:ContentPlaceHolder ID="apMasterForm" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+    </form>
+            <!--Footer Part-->
+            <div id="push"></div>
+            <div id="footer" style="background: url(/Content/Images/slice.jpg);">
+                <div id="content">
+                    All &copy;Copyrights 2016-2017 reserved by OBDIS.
+        <span class="pull-right">Developed by
+            <a target="_blank" href="https://www.fb.com/sakib.alsamad9">Sakib Al Samad | OBDIS</a>
+        </span>
+                </div>
+            </div>
+            <!--End Footer Part-->
+        </div>
+      </div> 
+     <script src="../../Scripts/jquery-3.2.1.min.js"></script> 
+    <script src="../../Scripts/jquery.validate.min.js"></script> 
+    <asp:ContentPlaceHolder ID="apScript" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

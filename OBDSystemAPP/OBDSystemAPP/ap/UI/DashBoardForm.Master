@@ -1,0 +1,236 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DashBoardForm.master.cs" Inherits="OBDSystemAPP.ap.UI.DashBoardForm" %>
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" owner="sasamad" />
+    <title>BDIMS | Dashboard</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
+    <!-- bootstrap 3.0.2 -->
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- font Awesome -->
+    <link href="../apContent/Template/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Ionicons -->
+    <link href="../apContent/Template/css/ionicons.min.css" rel="stylesheet" />
+    <link href="../apContent/Template/css/AdminLTE.css" rel="stylesheet" />
+    <link href="../../Content/Custom.css" rel="stylesheet" />
+    
+</head>
+<body class="skin-black">
+    <!--myheader-->
+    <div class="page-header " id="page-header2">
+        <div class="left-logo">
+            <img src="../../Content/Images/bloodLogo.jpg" class="img-responsive" style="height: 142px;" />
+        </div>
+        <div class="right-logo" style="background: url(../../Content/Images/redBlood.jpg);">
+            <h2 style="line-height: 88px;"><strong>
+                <label style="font-size: 55px;">O</label>nline Blood Donation Information System | OBDIS</strong></h2>
+        </div>
+    </div>
+    <!-- end myheader-->
+    <!-- header logo: style can be found in header.less -->
+    <header class="header">
+        <a href="DashboardFirstForm.aspx" class="logo">
+            <!-- Add the class icon to your logo image or logo icon to add the margining -->
+            OBDIS
+        </a>
+
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a> 
+                <div class="navbar-right" style="margin-right: 46px;">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown messages-menu" style="margin-right: 20px;">
+                            <a href="#">
+                                <i class="fa fa-envelope"></i>
+                                <span class="label label-success"><%=NumberOfMsg %></span>
+                            </a> 
+                        </li>
+                        <!-- Notifications: style can be found in dropdown.less -->
+                        <li class="dropdown notifications-menu">
+                            <a href="PendingDonorInfo.aspx" id="PendingDonor">
+                                <i class="fa fa-warning"></i>
+                                <span class="label label-warning "><%=NumberOfPendingDonor %></span>
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+            </nav> 
+    </header>
+    <!-- wrapper -->
+    <div class="wrapper  row-offcanvas-left" style="height: auto;">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas " style="margin-top: 146px; height: 935px;">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <%-- <img src="<%=Photo %>" class="img-circle" alt="User Image" />--%>
+                        <img src="../apContent/Template/img/sapic.jpg" class="img-circle" alt="User Image" />
+                    </div>
+                    <div class="pull-left info">
+                        <p>
+                            <%=Name %>
+                        </p>
+
+                        <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
+                    </div>
+                </div>
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="active">
+                        <a href="DashboardFirstForm.aspx">
+                            <i class="fa fa-dashboard"></i><span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>Donor Info</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="PendingDonorInfo.aspx"><i class="fa fa-angle-double-right"></i>Pending Donor Request</a>
+                            </li>
+                            <li><a href="DonorPublishInfo.aspx"><i class="fa fa-angle-double-right"></i>Donor Publish Information</a>
+                            </li>
+                            <li><a href="AllDonorInfo.aspx"><i class="fa fa-angle-double-right"></i>All Donor Information</a>
+                            </li>
+                        </ul>
+                    </li>
+                     <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>Report Information</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="AllReportInfo.aspx"><i class="fa fa-angle-double-right"></i>All Report Info</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-record"></i>
+                            <span>Organization Info</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="BldOrganizationInfo.aspx"><i
+                                class="fa fa-angle-double-right"></i>Add Organization</a>
+                            </li>
+                            <li><a href="BldOrganizationDetailInfo.aspx"><i
+                                class="fa fa-angle-double-right"></i>All Organization Info</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>Blood Information</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="bloodInfo.aspx"><i class="fa fa-angle-double-right"></i>Add Blood Group Info</a>
+                            </li>
+                            <li><a href="showBloodInfo.aspx"><i class="fa fa-angle-double-right"></i>Show All Blood Group Info</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-record"></i>
+                            <span>Area Info</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="DivisionInfo.aspx"><i class="fa fa-angle-double-right"></i>Add Division Info</a>
+                            </li>
+                            <li><a href="AllDivisions.aspx"><i class="fa fa-angle-double-right"></i>Show All Division Info</a>
+                            </li>
+                            <li><a href="DistrictInfo.aspx"><i class="fa fa-angle-double-right"></i>Add District Info</a>
+                            </li>
+                            <li><a href="AllDistrictInfo.aspx"><i class="fa fa-angle-double-right"></i>Show All District Info</a>
+                            </li>
+                            <li><a href="SubDistrictInfo.aspx"><i class="fa fa-angle-double-right"></i>Add Sub-district Info</a>
+                            </li>
+                            <li><a href="SubDistrictGridView.aspx"><i class="fa fa-angle-double-right"></i>Show All Sub-district Info</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>CampaignInfo</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="CampaignInfo.aspx"><i class="fa fa-angle-double-right"></i>Add Campaign Information</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="LogoutForm.aspx"><i class="glyphicon glyphicon-log-out"></i>Logout</a>
+
+                    </li>
+
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Right side column. Contains the navbar and content of the page -->
+        <aside class="right-side">
+            <form id="DashBoardMasterForm" runat="server">
+
+                <asp:ContentPlaceHolder ID="DashboardMasterBody" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </form>
+
+        </aside>
+        <!--Footer Part-->
+        <div class="col-sm-12" style="margin-top: 800px;">
+
+            <div id="footer" style="background: url(../../Content/Images/slice.jpg);">
+                <div id="content">
+                    All &copy;Copyrights 2016-2017 reserved by OBDIS.
+        <span class="pull-right">Developed by
+            <a target="_blank" href="https://www.fb.com/sakib.alsamad9">Sakib Al Samad | OBDIS</a>
+        </span>
+                </div>
+            </div>
+            <!--End Footer Part-->
+        </div>
+
+
+    </div>
+    <!-- /.right-side -->
+    <!-- footer  -->
+
+    <!-- jQuery 2.0.2 -->
+    <script src="../apContent/Template/js/plugins/jQuery/jquery-2.2.3.min.js"></script>
+
+    <!-- jQuery UI 1.10.3 -->
+    <script src="../apContent/Template/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script> 
+    <!-- Bootstrap -->
+    <script src="../apContent/Template/js/bootstrap.min.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="../apContent/Template/js/AdminLTE/app.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery.validate.min.js"></script>
+    <asp:ContentPlaceHolder ID="dashboardScript" runat="server"></asp:ContentPlaceHolder>
+   
+</body>
+</html>

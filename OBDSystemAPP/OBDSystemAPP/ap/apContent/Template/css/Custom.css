@@ -1,0 +1,25 @@
+﻿body {
+    margin: auto;
+    padding: 0;
+    }
+.box_design {
+    width: 45%;
+    height: 322px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.login_logo_design {
+    width: 100%;
+    height: 72px;
+    margin: 0px;
+    padding: 0px;
+}
+.btn_register_design {
+    margin-right: 0px;
+}
+.btn-register {
+    width: 100%;
+}
+.hr_design {
+    color: 2px solid blue;
+}
